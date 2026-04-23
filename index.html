@@ -144,6 +144,25 @@ width: 100%;
 width: 50%;
 border-radius: 4px;
 }
+/* 新增：8个图片空位排版（2行4列，避免占用过多空间） */
+.crazy-eights-imgs {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 15px;
+margin-bottom: 30px;
+}
+.crazy-eights-imgs .img-placeholder {
+height: 120px;
+font-size: 12px;
+}
+/* 新增：design alternatives数字排版（每列1个） */
+.design-alternatives {
+display: flex;
+flex-direction: column;
+gap: 15px;
+font-size: 18px;
+font-weight: 500;
+}
 </style>
 </head>
 <body>
@@ -219,16 +238,34 @@ border-radius: 4px;
 <h2 class="section-title">03. Ideation & Alternatives</h2>
 <div class="content-grid">
 <div class="text-box">
-<h3>Crazy Eights & Design Choices</h3>
-<p>We explored 8 quick interface sketches and compared design alternatives.</p>
-<br>
-<p><strong>Final Choice:</strong> User-controlled AI hints – balanced support & independence.</p>
+<h3>Crazy Eights</h3>
+/* 8个图片空位，2行4列排版，避免占用过多空间，无需分两页 */
+<div class="crazy-eights-imgs">
+<div class="img-placeholder">图片1空位</div>
+<div class="img-placeholder">图片2空位</div>
+<div class="img-placeholder">图片3空位</div>
+<div class="img-placeholder">图片4空位</div>
+<div class="img-placeholder">图片5空位</div>
+<div class="img-placeholder">图片6空位</div>
+<div class="img-placeholder">图片7空位</div>
+<div class="img-placeholder">图片8空位</div>
 </div>
-<img src="ideaDemo1.png.jpg" alt="描述文字" style="width:100%; border-radius:4px;">
+<br>
+<h3>Design Alternatives</h3>
+<div class="design-alternatives">
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+</div>
+</div>
+<!-- 预留右侧空位，与左侧内容对齐，保持排版一致 -->
+<div class="img-placeholder">右侧预留空位（平衡排版）</div>
 </div>
 </section>
 <section id="implementation">
 <h2 class="section-title">04. Technical Implementation</h2>
+<div class="content-grid">
 <div class="text-box">
 <h3>System Architecture</h3>
 <p>Frontend interface + Backend management + AI hints & summaries.</p>
@@ -241,6 +278,9 @@ border-radius: 4px;
 <tr><td>C</td><td>AI Integration & Testing</td></tr>
 <tr><td>D</td><td>Research & Evaluation</td></tr>
 </table>
+</div>
+<!-- 第四大点右侧插入图片空位 -->
+<div class="img-placeholder">第四大点图片空位</div>
 </div>
 </section>
 <section id="evaluation">

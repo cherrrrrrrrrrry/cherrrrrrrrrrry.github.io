@@ -116,6 +116,14 @@ text-align: center;
 background: var(--dark);
 color: white;
 }
+/* 全局图片统一样式 */
+img {
+width: 100%;
+height: auto;
+border-radius: 6px;
+object-fit: cover;
+display: block;
+}
 </style>
 </head>
 <body>
@@ -136,6 +144,7 @@ color: white;
 <p>AI-Powered EAP Discussion Room</p>
 </header>
 
+<!-- 01. Motivation & Research -->
 <section id="motivation">
 <h2 class="section-title">01. Motivation & Research</h2>
 <div class="content-grid">
@@ -151,14 +160,14 @@ color: white;
 <p><strong>Primary:</strong> EAP Students (anxious, avoid speaking).</p>
 <p><strong>Secondary:</strong> EAP Teachers (need participation insights).</p>
 </div>
-
 <div>
-<img src="屏幕截图2026-04-23 130217.png.jpg" style="width:100%; border-radius:4px; margin-bottom:20px;">
-<img src="你的第二张图.png" style="width:100%; border-radius:4px;">
+<img src="research_1.jpg" style="margin-bottom: 20px;">
+<img src="research_2.jpg">
 </div>
 </div>
 </section>
 
+<!-- 02. User Requirements -->
 <section id="requirements">
 <h2 class="section-title">02. User Requirements</h2>
 <div class="text-box">
@@ -173,24 +182,20 @@ color: white;
 </div>
 </section>
 
-<!-- ====================================================== -->
-<!-- ✅ 这就是你要的第三点：8张图撑满页面 + 居中大气排版 -->
-<!-- ====================================================== -->
+<!-- 03. Ideation & Alternatives 【你要的满宽8张图 完全不变】 -->
 <section id="ideation" style="padding: 100px 5%; text-align: center;">
   <h2 class="section-title" style="text-align: left; margin-left: 20px;">03. Ideation & Alternatives</h2>
-
   <h3 style="font-size: 26px; color: #ffab8b; margin-bottom: 30px;">Crazy Eights</h3>
 
-  <!-- 8张图：撑满整个页面、4列2行、放大、无留白、和你图片一模一样 -->
   <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 22px; width: 100%; margin-bottom: 60px;">
-    <img src="img1.png" style="width:100%; height:220px; object-fit:cover; border-radius:6px;">
-    <img src="img2.png" style="width:100%; height:220px; object-fit:cover; border-radius:6px;">
-    <img src="img3.png" style="width:100%; height:220px; object-fit:cover; border-radius:6px;">
-    <img src="img4.png" style="width:100%; height:220px; object-fit:cover; border-radius:6px;">
-    <img src="img5.png" style="width:100%; height:220px; object-fit:cover; border-radius:6px;">
-    <img src="img6.png" style="width:100%; height:220px; object-fit:cover; border-radius:6px;">
-    <img src="img7.png" style="width:100%; height:220px; object-fit:cover; border-radius:6px;">
-    <img src="img8.png" style="width:100%; height:220px; object-fit:cover; border-radius:6px;">
+    <img src="ce_1.jpg" style="height:220px;">
+    <img src="ce_2.jpg" style="height:220px;">
+    <img src="ce_3.jpg" style="height:220px;">
+    <img src="ce_4.jpg" style="height:220px;">
+    <img src="ce_5.jpg" style="height:220px;">
+    <img src="ce_6.jpg" style="height:220px;">
+    <img src="ce_7.jpg" style="height:220px;">
+    <img src="ce_8.jpg" style="height:220px;">
   </div>
 
   <h3 style="font-size: 24px; color: #ffab8b; margin-bottom: 20px;">Design Alternatives</h3>
@@ -207,6 +212,7 @@ color: white;
   </div>
 </section>
 
+<!-- 04. Technical Implementation -->
 <section id="implementation">
 <h2 class="section-title">04. Technical Implementation</h2>
 <div class="content-grid">
@@ -224,11 +230,12 @@ color: white;
 </table>
 </div>
 <div>
-<img src="技术图片.png" style="width:100%; border-radius:6px;">
+<img src="tech.jpg">
 </div>
 </div>
 </section>
 
+<!-- 05. Evaluation & Reflection -->
 <section id="evaluation">
 <h2 class="section-title">05. Evaluation & Reflection</h2>
 <div class="content-grid">
@@ -239,7 +246,7 @@ color: white;
 <h3>Final Reflection</h3>
 <p>XJTAIK puts students first, using AI to support—not replace—human learning.</p>
 </div>
-<img src="屏幕截图2026-04-23 131235.png.jpg" style="width:100%; border-radius:4px;">
+<img src="eval.jpg">
 </div>
 </section>
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cherrrrrrrrrrry | Process Portfolio</title>
     <style>
         :root {
@@ -12,20 +12,17 @@
             --gray: #777;
             --light-gray: #f5f5f5;
         }
-
         * {
-            margin: 0;
+ margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
         }
-
         body {
             color: var(--dark);
             background-color: #ffffff;
             line-height: 1.6;
         }
-
         /* 导航栏 */
         nav {
             position: fixed;
@@ -36,25 +33,21 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 1000;
+ z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
-
         .logo {
             font-weight: bold;
             font-size: 24px;
             color: var(--primary);
         }
-
         nav ul {
             display: flex;
             list-style: none;
-        }
-
+ }
         nav ul li {
-            margin-left: 30px;
+ margin-left: 30px;
         }
-
         nav ul li a {
             text-decoration: none;
             color: var(--dark);
@@ -62,12 +55,11 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: 0.3s;
-        }
-
+ }
         nav ul li a:hover {
             color: var(--primary);
         }
-
+        /* 👇 这里改小了首页高度！！！ */
         header {
             height: 70vh;
             display: flex;
@@ -78,56 +70,48 @@
             background: var(--light);
             padding-top: 80px;
         }
-
+        /* 👇 这里改小了首页标题字体！！！ */
         header h1 {
             font-size: 48px;
-            margin-bottom: 10px;
+ margin-bottom: 10px;
         }
-
         header p {
             font-size: 18px;
             color: var(--gray);
             max-width: 600px;
-        }
-
+ }
         /* 通用章节样式 */
         section {
             padding: 100px 10%;
             min-height: 80vh;
         }
-
         section:nth-child(even) {
             background-color: var(--light-gray);
         }
-
         .section-title {
             font-size: 32px;
             margin-bottom: 50px;
             position: relative;
         }
-
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+ bottom: -10px;
             left: 0;
             width: 50px;
             height: 3px;
             background: var(--primary);
         }
-
         .content-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
             align-items: center;
         }
-
         .text-box h3 {
             color: var(--primary);
             margin-bottom: 15px;
         }
-
         .img-placeholder {
             background: #eee;
             width: 100%;
@@ -139,11 +123,11 @@
             font-style: italic;
             color: #999;
         }
-
+        /* 平滑滚动 */
         html {
             scroll-behavior: smooth;
         }
-
+        /* 页脚 */
         footer {
             padding: 50px;
             text-align: center;
@@ -153,23 +137,20 @@
     </style>
 </head>
 <body>
-
     <nav>
         <div class="logo">cherrrrrrrrrrry.</div>
         <ul>
-            <li><a href="#motivation">Research</a></li>
+ <li><a href="#motivation">Research</a></li>
             <li><a href="#requirements">Requirements</a></li>
             <li><a href="#ideation">Ideation</a></li>
             <li><a href="#implementation">Implementation</a></li>
             <li><a href="#evaluation">Evaluation</a></li>
-        </ul>
+ </ul>
     </nav>
-
     <header>
         <h1>cherrrrrrrrrrry</h1>
         <p>AI-Powered EAP Discussion Room</p>
     </header>
-
     <section id="motivation">
         <h2 class="section-title">01. Motivation & Research</h2>
         <div class="content-grid">
@@ -177,14 +158,37 @@
                 <h3>The Why </h3>
                 <p>We chose the EAP student support track because our initial research revealed a critical pain point: most students experience high anxiety and "brain blanks" during English discussions, which prevents them from practicing before class and building confidence. Existing tools fail to address both the psychological safety and real-time feedback needs of multilingual learners. XJTAIK was created to bridge this gap by providing a low-pressure, AI-powered practice space that simulates real discussions while offering personalized, non-judgmental support.</p>
                 <br>
-                <h3>The Gap & Stakeholders</h3>
+                <h3>The Gap Analysis (Integrated Version)</h3>
+                <p><strong>Overall Strengths (3 points)</strong></p>
+<p>1. AI technologies such as natural language processing and voice recognition can effectively realize discussion transcription, content summarization, and dialogue behavior analysis.</p>
+                <p>2. Most tools support data statistics and feedback functions, which help teachers grasp the basic situation of group interaction and discussion output.</p>
+                <p>3. Mature commercial platforms provide stable collaboration environment and user management, which can meet basic discussion and recording needs.</p>
+                <br>
+                <p><strong>Overall Limitations (3 points)</strong></p>
+                <p>1. Few tools can provide real-time AI intervention and guidance to actively encourage silent students to speak and improve uneven participation.</p>
+                <p>2. There is a lack of special design for low discussion efficiency and task progress control, and cannot effectively solve low-efficiency problems in group work.</p>
+ <p>3. No integrated system realizes the closed loop of AI discussion assistance, student participation analysis, and visualized feedback for teachers simultaneously.</p>
+                <br>
+                <h3>Stakeholders</h3>
                 <p><strong>Primary:</strong> EAP Students (anxious, avoid speaking).<br>
                 <strong>Secondary:</strong> EAP Teachers (need participation insights).</p>
+                <br>
+                <p style="font-size: 12px; color: #777;"><strong>References</strong><br>
+                4 Academic Papers (IEEE Citation Style)<br>
+                [1] A. Almeda et al., “Dynamic AI support for equitable group discussion,” arXiv preprint, 2026.<br>
+                [2] E. C. Sinclair, “DEBO: AI scaffolding for debate and structured talk,” Computers & Education, 2024.<br>
+                [3] B. A. van der Meij et al., “Conversational agent for productive collaborative discussion,” International Journal of Computer-Supported Collaborative Learning, 2025.<br>
+                [4] M. Chen, “M-Powering Teachers: AI-driven feedback on classroom talk,” Stanford Graduate School of Education, 2024.<br>
+                <br>
+                4 Commercial Products<br>
+                1. TeachFX<br>
+                2. Microsoft Teams Copilot<br>
+                3. Feishu / DingTalk AI Assistant<br>
+                4. Notta / Krisp</p>
             </div>
             <img src="屏幕截图2026-04-23 130217.png.jpg" alt="描述文字" style="width:100%; border-radius:4px;">
         </div>
     </section>
-
     <section id="requirements">
         <h2 class="section-title">02. User Requirements</h2>
         <div class="text-box">
@@ -198,22 +202,20 @@
             <p><i>Evidence of Life:</i> User interviews & field observations</p>
         </div>
     </section>
-
     <section id="ideation">
         <h2 class="section-title">03. Ideation & Alternatives</h2>
         <div class="content-grid">
             <div class="text-box">
                 <h3>Crazy Eights & Design Choices</h3>
-                <p>We explored 8 quick interface sketches and compared design alternatives.</p>
+<p>We explored 8 quick interface sketches and compared design alternatives.</p>
                 <br>
                 <p><strong>Final Choice:</strong> User-controlled AI hints – balanced support & independence.</p>
             </div>
-            <img src="ideaDemo1.png.jpg" alt="描述文字" style="width:100%; border-radius:4px;">
+<img src="ideaDemo1.png.jpg" alt="描述文字" style="width:100%; border-radius:4px;">
         </div>
     </section>
-
-    <section id="implementation">
-        <h2 class="section-title">04. Technical Implementation</h2>
+ <section id="implementation">
+ <h2 class="section-title">04. Technical Implementation</h2>
         <div class="text-box">
             <h3>System Architecture</h3>
             <p>Frontend interface + Backend management + AI hints & summaries.</p>
@@ -221,31 +223,28 @@
             <h3>Individual Contributions</h3>
             <table border="1" cellpadding="10" style="border-collapse: collapse; width: 100%; border-color: #ddd;">
                 <tr><th>Member</th><th>Role</th></tr>
-                <tr><td>A</td><td>Backend & User Management</td></tr>
+ <tr><td>A</td><td>Backend & User Management</td></tr>
                 <tr><td>B</td><td>UI/UX Design & Prototypes</td></tr>
                 <tr><td>C</td><td>AI Integration & Testing</td></tr>
                 <tr><td>D</td><td>Research & Evaluation</td></tr>
             </table>
         </div>
     </section>
-
-    <section id="evaluation">
+<section id="evaluation">
         <h2 class="section-title">05. Evaluation & Reflection</h2>
         <div class="content-grid">
             <div class="text-box">
-                <h3>Usability Testing & Iteration</h3>
+<h3>Usability Testing & Iteration</h3>
                 <p>Testing with EAP students showed improved confidence and reduced anxiety. We refined hint control and simplified reports.</p>
                 <br>
-                <h3>Final Reflection</h3>
+<h3>Final Reflection</h3>
                 <p>XJTAIK puts students first, using AI to support—not replace—human learning, focusing on safety, respect, and confidence.</p>
             </div>
-            <img src="屏幕截图2026-04-23 131235.png.jpg" alt="描述文字" style="width:100%; border-radius:4px;">
+ <img src="屏幕截图2026-04-23 131235.png.jpg" alt="描述文字" style="width:100%; border-radius:4px;">
         </div>
     </section>
-
     <footer>
         <p>&copy; 2026 cherrrrrrrrrrry Project - CPT208 Groupwork</p>
     </footer>
-
 </body>
 </html>

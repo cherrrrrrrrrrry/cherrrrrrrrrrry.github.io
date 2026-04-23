@@ -1,124 +1,251 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Group B1-7 Project</title>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: "Microsoft YaHei", sans-serif;
-            }
-            body {
-                background-color: #f7f9fc;
-                padding: 40px 20px;
-                line-height: 1.7;
-            }
-            .container {
-                max-width: 800px;
-                margin: 0 auto;
-                background: white;
-                padding: 40px;
-                border-radius: 12px;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            }
-            h1 {
-                text-align: center;
-                color: #2c3e50;
-                margin-bottom: 30px;
-                font-size: 24px;
-            }
-            .info {
-                margin-bottom: 25px;
-            }
-            .info h3 {
-                color: #34495e;
-                margin-bottom: 10px;
-                font-size: 18px;
-                border-left: 4px solid #3498db;
-                padding-left: 10px;
-            }
-            table {
-                width: 100%;
-                border-collapse: collapse;
-                margin: 10px 0;
-            }
-            table td,
-            table th {
-                border: 1px solid #ddd;
-                padding: 10px;
-                text-align: center;
-            }
-            table th {
-                background-color: #f1f5fb;
-                color: #2c3e50;
-            }
-            p {
-                color: #444;
-                font-size: 16px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <h1>Group B1-7 Project</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cherrrrrrrrrrry | Process Portfolio</title>
+    <style>
+        :root {
+            --primary: #ffab8b;
+            --light: #fff5f0;
+            --dark: #2d3142;
+            --gray: #777;
+            --light-gray: #f5f5f5;
+        }
 
-            <div class="info">
-                <h3>1. Group Information</h3>
-                <p>Group: B1-7</p>
-            </div>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+        }
 
-            <div class="info">
-                <h3>2. Group Members</h3>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Student ID</th>
-                    </tr>
-                    <tr>
-                        <td>Kaihan Ouyang</td>
-                        <td>2363257</td>
-                    </tr>
-                    <tr>
-                        <td>Caiyi Yang</td>
-                        <td>2361071</td>
-                    </tr>
-                    <tr>
-                        <td>Enqi Fan</td>
-                        <td>2360049</td>
-                    </tr>
-                    <tr>
-                        <td>Hanqi Yan</td>
-                        <td>2361280</td>
-                    </tr>
-                </table>
-            </div>
+        body {
+            color: var(--dark);
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
 
-            <div class="info">
-                <h3>3. Product Name</h3>
-                <p>XjTaIk</p>
-            </div>
+        /* 导航栏 */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
 
-            <div class="info">
-                <h3>4. Reason for Choosing the Social Connectivity track</h3>
-                <p>
-                    1. Social connection is a basic need in modern life, so this
-                    topic is practical and meaningful.
-                </p>
-                <p>
-                    2. It is suitable for front-end development and user
-                    interface design.
-                </p>
-                <p>
-                    3. This theme can show teamwork, communication skills and
-                    technical practice.
-                </p>
-                <p>
-                    4. Social Connectivity follows the trend of digital life and
-                    online interaction.
-                </p>
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+            color: var(--primary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+
+        header {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: var(--light);
+            padding-top: 80px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: var(--gray);
+            max-width: 600px;
+        }
+
+        /* 通用章节样式 */
+        section {
+            padding: 100px 10%;
+            min-height: 80vh;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--light-gray);
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .text-box h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .img-placeholder {
+            background: #eee;
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            font-style: italic;
+            color: #999;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        footer {
+            padding: 50px;
+            text-align: center;
+            background: var(--dark);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">cherrrrrrrrrrry.</div>
+        <ul>
+            <li><a href="#motivation">Research</a></li>
+            <li><a href="#requirements">Requirements</a></li>
+            <li><a href="#ideation">Ideation</a></li>
+            <li><a href="#implementation">Implementation</a></li>
+            <li><a href="#evaluation">Evaluation</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>cherrrrrrrrrrry</h1>
+        <p>AI-Powered EAP Discussion Room</p>
+    </header>
+
+    <section id="motivation">
+        <h2 class="section-title">01. Motivation & Research</h2>
+        <div class="content-grid">
+            <div class="text-box">
+                <h3>The Why </h3>
+                <p>We chose the EAP student support track because our initial research revealed a critical pain point: most students experience high anxiety and "brain blanks" during English discussions, which prevents them from practicing before class and building confidence. Existing tools fail to address both the psychological safety and real-time feedback needs of multilingual learners. XJTAIK was created to bridge this gap by providing a low-pressure, AI-powered practice space that simulates real discussions while offering personalized, non-judgmental support.</p>
+                <br>
+                <h3>The Gap & Stakeholders</h3>
+                <p><strong>Primary:</strong> EAP Students (anxious, avoid speaking).<br>
+                <strong>Secondary:</strong> EAP Teachers (need participation insights).</p>
             </div>
+            <img src="屏幕截图2026-04-23 130217.png.jpg" alt="描述文字" style="width:100%; border-radius:4px;">
         </div>
-    </body>
+    </section>
+
+    <section id="requirements">
+        <h2 class="section-title">02. User Requirements</h2>
+        <div class="text-box">
+            <h3>3 Must-Have "Playful" Requirements</h3>
+            <ul>
+                <li>Low-pressure, judgment-free practice environment</li>
+                <li>User-controlled, gentle AI hints during silence</li>
+                <li>Supportive, clear feedback after discussion</li>
+            </ul>
+            <br>
+            <p><i>Evidence of Life:</i> User interviews & field observations</p>
+        </div>
+    </section>
+
+    <section id="ideation">
+        <h2 class="section-title">03. Ideation & Alternatives</h2>
+        <div class="content-grid">
+            <div class="text-box">
+                <h3>Crazy Eights & Design Choices</h3>
+                <p>We explored 8 quick interface sketches and compared design alternatives.</p>
+                <br>
+                <p><strong>Final Choice:</strong> User-controlled AI hints – balanced support & independence.</p>
+            </div>
+            <img src="ideaDemo1.png.jpg" alt="描述文字" style="width:100%; border-radius:4px;">
+        </div>
+    </section>
+
+    <section id="implementation">
+        <h2 class="section-title">04. Technical Implementation</h2>
+        <div class="text-box">
+            <h3>System Architecture</h3>
+            <p>Frontend interface + Backend management + AI hints & summaries.</p>
+            <br>
+            <h3>Individual Contributions</h3>
+            <table border="1" cellpadding="10" style="border-collapse: collapse; width: 100%; border-color: #ddd;">
+                <tr><th>Member</th><th>Role</th></tr>
+                <tr><td>A</td><td>Backend & User Management</td></tr>
+                <tr><td>B</td><td>UI/UX Design & Prototypes</td></tr>
+                <tr><td>C</td><td>AI Integration & Testing</td></tr>
+                <tr><td>D</td><td>Research & Evaluation</td></tr>
+            </table>
+        </div>
+    </section>
+
+    <section id="evaluation">
+        <h2 class="section-title">05. Evaluation & Reflection</h2>
+        <div class="content-grid">
+            <div class="text-box">
+                <h3>Usability Testing & Iteration</h3>
+                <p>Testing with EAP students showed improved confidence and reduced anxiety. We refined hint control and simplified reports.</p>
+                <br>
+                <h3>Final Reflection</h3>
+                <p>XJTAIK puts students first, using AI to support—not replace—human learning, focusing on safety, respect, and confidence.</p>
+            </div>
+            <img src="屏幕截图2026-04-23 131235.png.jpg" alt="描述文字" style="width:100%; border-radius:4px;">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 cherrrrrrrrrrry Project - CPT208 Groupwork</p>
+    </footer>
+
+</body>
 </html>

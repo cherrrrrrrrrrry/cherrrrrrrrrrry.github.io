@@ -23,12 +23,11 @@ color: var(--dark);
 background-color: #ffffff;
 line-height: 1.6;
 }
-/* 导航栏 */
 nav {
 position: fixed;
 top: 0;
 width: 100%;
-background: rgba(255, 255, 255, 0.95);
+background: rgba(255,255,255,0.95);
 padding: 20px 50px;
 display: flex;
 justify-content: space-between;
@@ -59,7 +58,6 @@ transition: 0.3s;
 nav ul li a:hover {
 color: var(--primary);
 }
-/* 👇 这里改小了首页高度！！！ */
 header {
 height: 70vh;
 display: flex;
@@ -70,7 +68,6 @@ text-align: center;
 background: var(--light);
 padding-top: 80px;
 }
-/* 👇 这里改小了首页标题字体！！！ */
 header h1 {
 font-size: 48px;
 margin-bottom: 10px;
@@ -80,10 +77,8 @@ font-size: 18px;
 color: var(--gray);
 max-width: 600px;
 }
-/* 通用章节样式 */
 section {
 padding: 100px 10%;
-min-height: 80vh;
 }
 section:nth-child(even) {
 background-color: var(--light-gray);
@@ -106,74 +101,25 @@ background: var(--primary);
 display: grid;
 grid-template-columns: 1fr 1fr;
 gap: 50px;
-align-items: flex-start;
+align-items: center;
 }
 .text-box h3 {
 color: var(--primary);
 margin-bottom: 15px;
 }
-.img-placeholder {
-background: #eee;
-width: 100%;
-height: 300px;
-display: flex;
-align-items: center;
-justify-content: center;
-border-radius: 4px;
-font-style: italic;
-color: #999;
-}
-/* 平滑滚动 */
 html {
 scroll-behavior: smooth;
 }
-/* 页脚 */
 footer {
 padding: 50px;
 text-align: center;
 background: var(--dark);
 color: white;
 }
-/* 新增：两张照片横向排列样式（备用） */
-.img-row {
-display: flex;
-gap: 20px;
-width: 100%;
-}
-.img-row img {
-width: 50%;
-border-radius: 4px;
-}
-/* 新增：8个图片空位排版（2行4列，放大图片，适配页面） */
-.crazy-eights-imgs {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 20px;
-margin-bottom: 50px;
-}
-.crazy-eights-imgs .img-placeholder {
-height: 200px;
-font-size: 14px;
-}
-/* 新增：design alternatives数字排版（每列1个） */
-.design-alternatives {
-display: flex;
-flex-direction: column;
-gap: 15px;
-font-size: 18px;
-font-weight: 500;
-margin-bottom: 30px;
-}
-/* 新增：Final Choice样式，与整体风格统一 */
-.final-choice {
-background: var(--light);
-padding: 20px;
-border-radius: 4px;
-margin-top: 20px;
-}
 </style>
 </head>
 <body>
+
 <nav>
 <div class="logo">cherrrrrrrrrrry.</div>
 <ul>
@@ -184,99 +130,83 @@ margin-top: 20px;
 <li><a href="#evaluation">Evaluation</a></li>
 </ul>
 </nav>
+
 <header>
 <h1>XJTaik</h1>
 <p>AI-Powered EAP Discussion Room</p>
 </header>
+
 <section id="motivation">
 <h2 class="section-title">01. Motivation & Research</h2>
 <div class="content-grid">
 <div class="text-box">
-<h3>The Why </h3>
-<p>We chose the EAP student support track because our initial research revealed a critical pain point: most students experience high anxiety and "brain blanks" during English discussions, which prevents them from practicing before class and building confidence. Existing tools fail to address both the psychological safety and real-time feedback needs of multilingual learners. XJTAIK was created to bridge this gap by providing a low-pressure, AI-powered practice space that simulates real discussions while offering personalized, non-judgmental support.</p>
+<h3>The Why</h3>
+<p>We chose the EAP student support track because our initial research revealed a critical pain point: most students experience high anxiety and "brain blanks" during English discussions, which prevents them from practicing before class and building confidence.</p>
 <br>
-<h3>The Gap Analysis (Integrated Version)</h3>
-<p><strong>Overall Strengths (3 points)</strong></p>
-<p>1. AI technologies such as natural language processing and voice recognition can effectively realize discussion transcription, content summarization, and dialogue behavior analysis.</p>
-<p>2. Most tools support data statistics and feedback functions, which help teachers grasp the basic situation of group interaction and discussion output.</p>
-<p>3. Mature commercial platforms provide stable collaboration environment and user management, which can meet basic discussion and recording needs.</p>
-<br>
-<p><strong>Overall Limitations (3 points)</strong></p>
-<p>1. Few tools can provide real-time AI intervention and guidance to actively encourage silent students to speak and improve uneven participation.</p>
-<p>2. There is a lack of special design for low discussion efficiency and task progress control, and cannot effectively solve low-efficiency problems in group work.</p>
-<p>3. No integrated system realizes the closed loop of AI discussion assistance, student participation analysis, and visualized feedback for teachers simultaneously.</p>
+<h3>The Gap Analysis</h3>
+<p><strong>Strengths:</strong> AI transcription, feedback, stable platforms.</p>
+<p><strong>Limitations:</strong> No real-time intervention, no progress control, no integrated system.</p>
 <br>
 <h3>Stakeholders</h3>
-<p><strong>Primary:</strong> EAP Students (anxious, avoid speaking).<br>
-<strong>Secondary:</strong> EAP Teachers (need participation insights).</p>
-<br>
-<p style="font-size: 12px; color: #777;"><strong>References</strong><br>
-4 Academic Papers (IEEE Citation Style)<br>
-[1] A. Almeda et al., “Dynamic AI support for equitable group discussion,” arXiv preprint, 2026.<br>
-[2] E. C. Sinclair, “DEBO: AI scaffolding for debate and structured talk,” Computers & Education, 2024.<br>
-[3] B. A. van der Meij et al., “Conversational agent for productive collaborative discussion,” International Journal of Computer-Supported Collaborative Learning, 2025.<br>
-[4] M. Chen, “M-Powering Teachers: AI-driven feedback on classroom talk,” Stanford Graduate School of Education, 2024.<br>
-<br>
-4 Commercial Products<br>
-1. TeachFX<br>
-2. Microsoft Teams Copilot<br>
-3. Feishu / DingTalk AI Assistant<br>
-4. Notta / Krisp</p>
+<p><strong>Primary:</strong> EAP Students (anxious, avoid speaking).</p>
+<p><strong>Secondary:</strong> EAP Teachers (need participation insights).</p>
 </div>
-<div class="img-col">
-<img src="屏幕截图2026-04-23 130217.png.jpg" alt="描述文字1" style="border-radius:4px; width:100%; margin-bottom:20px;">
-<img src="新增照片路径.png.jpg" alt="描述文字2" style="border-radius:4px; width:100%;">
+
+<div>
+<img src="屏幕截图2026-04-23 130217.png.jpg" style="width:100%; border-radius:4px; margin-bottom:20px;">
+<img src="你的第二张图.png" style="width:100%; border-radius:4px;">
 </div>
 </div>
 </section>
+
 <section id="requirements">
 <h2 class="section-title">02. User Requirements</h2>
 <div class="text-box">
 <h3>3 Must-Have "Playful" Requirements</h3>
-<ul>
+<ul style="padding-left:20px;">
 <li>Low-pressure, judgment-free practice environment</li>
 <li>User-controlled, gentle AI hints during silence</li>
 <li>Supportive, clear feedback after discussion</li>
 </ul>
 <br>
-<p><i>Evidence of Life:</i> User interviews & field observations</p>
+<p><i>Evidence:</i> User interviews & field observations</p>
 </div>
 </section>
-<section id="ideation">
-<h2 class="section-title">03. Ideation & Alternatives</h2>
-<div class="content-grid">
-<div class="text-box">
-<!-- 第一部分：Crazy Eights + 8张放大图片 -->
-<h3>Crazy Eights</h3>
-<div class="crazy-eights-imgs">
-<div class="img-placeholder">图片1空位</div>
-<div class="img-placeholder">图片2空位</div>
-<div class="img-placeholder">图片3空位</div>
-<div class="img-placeholder">图片4空位</div>
-<div class="img-placeholder">图片5空位</div>
-<div class="img-placeholder">图片6空位</div>
-<div class="img-placeholder">图片7空位</div>
-<div class="img-placeholder">图片8空位</div>
-</div>
-<br>
-<!-- 第二部分：Design Alternatives + Final Choice -->
-<h3>Design Alternatives</h3>
-<div class="design-alternatives">
-<div>1. AI-driven real-time hint system (adjustable frequency)</div>
-<div>2. Peer feedback mechanism with anonymous comments</div>
-<div>3. Gamified participation points to encourage speaking</div>
-<div>4. Visual discussion progress tracker for group tasks</div>
-</div>
-<br>
-<h3>Final Choice</h3>
-<div class="final-choice">
-<p>We selected Alternative 1 (AI-driven real-time hint system) as the core function, combined with elements of Alternative 4 (visual progress tracker). This combination addresses the core pain point of student anxiety by providing gentle, user-controlled hints, while the progress tracker solves the problem of low discussion efficiency. It aligns with our playful requirements and ensures psychological safety for EAP students, while supporting teachers to monitor group progress.</p>
-</div>
-</div>
-<!-- 右侧预留空位，平衡排版，与左侧内容风格统一 -->
-<div class="img-placeholder">Ideation 辅助示意图空位</div>
-</div>
+
+<!-- ====================================================== -->
+<!-- ✅ 这就是你要的第三点：8张图撑满页面 + 居中大气排版 -->
+<!-- ====================================================== -->
+<section id="ideation" style="padding: 100px 5%; text-align: center;">
+  <h2 class="section-title" style="text-align: left; margin-left: 20px;">03. Ideation & Alternatives</h2>
+
+  <h3 style="font-size: 26px; color: #ffab8b; margin-bottom: 30px;">Crazy Eights</h3>
+
+  <!-- 8张图：撑满整个页面、4列2行、放大、无留白、和你图片一模一样 -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 22px; width: 100%; margin-bottom: 60px;">
+    <img src="img1.png" style="width:100%; height:220px; object-fit:cover; border-radius:6px;">
+    <img src="img2.png" style="width:100%; height:220px; object-fit:cover; border-radius:6px;">
+    <img src="img3.png" style="width:100%; height:220px; object-fit:cover; border-radius:6px;">
+    <img src="img4.png" style="width:100%; height:220px; object-fit:cover; border-radius:6px;">
+    <img src="img5.png" style="width:100%; height:220px; object-fit:cover; border-radius:6px;">
+    <img src="img6.png" style="width:100%; height:220px; object-fit:cover; border-radius:6px;">
+    <img src="img7.png" style="width:100%; height:220px; object-fit:cover; border-radius:6px;">
+    <img src="img8.png" style="width:100%; height:220px; object-fit:cover; border-radius:6px;">
+  </div>
+
+  <h3 style="font-size: 24px; color: #ffab8b; margin-bottom: 20px;">Design Alternatives</h3>
+  <div style="max-width: 900px; margin: 0 auto 40px; text-align: left; font-size: 17px; line-height: 1.9;">
+    <div>1. AI-driven real-time hint system (adjustable frequency)</div>
+    <div>2. Peer feedback mechanism with anonymous comments</div>
+    <div>3. Gamified participation points to encourage speaking</div>
+    <div>4. Visual discussion progress tracker for group tasks</div>
+  </div>
+
+  <h3 style="font-size: 24px; color: #ffab8b; margin-bottom: 20px;">Final Choice</h3>
+  <div style="max-width: 900px; margin: 0 auto; text-align: left; font-size: 17px; line-height: 1.9; background: #fff5f0; padding: 28px; border-radius: 8px;">
+    We selected Alternative 1 (AI-driven real-time hint system) as the core function, combined with elements of Alternative 4 (visual progress tracker). This combination addresses the core pain point of student anxiety by providing gentle, user-controlled hints, while the progress tracker solves low-efficiency group work. It ensures psychological safety and meets all playful requirements.
+  </div>
 </section>
+
 <section id="implementation">
 <h2 class="section-title">04. Technical Implementation</h2>
 <div class="content-grid">
@@ -285,7 +215,7 @@ margin-top: 20px;
 <p>Frontend interface + Backend management + AI hints & summaries.</p>
 <br>
 <h3>Individual Contributions</h3>
-<table border="1" cellpadding="10" style="border-collapse: collapse; width: 100%; border-color: #ddd;">
+<table border="1" cellpadding="10" style="border-collapse:collapse; width:100%;">
 <tr><th>Member</th><th>Role</th></tr>
 <tr><td>A</td><td>Backend & User Management</td></tr>
 <tr><td>B</td><td>UI/UX Design & Prototypes</td></tr>
@@ -293,24 +223,29 @@ margin-top: 20px;
 <tr><td>D</td><td>Research & Evaluation</td></tr>
 </table>
 </div>
-<div class="img-placeholder">第四大点图片空位</div>
+<div>
+<img src="技术图片.png" style="width:100%; border-radius:6px;">
+</div>
 </div>
 </section>
+
 <section id="evaluation">
 <h2 class="section-title">05. Evaluation & Reflection</h2>
 <div class="content-grid">
 <div class="text-box">
 <h3>Usability Testing & Iteration</h3>
-<p>Testing with EAP students showed improved confidence and reduced anxiety. We refined hint control and simplified reports.</p>
+<p>Testing with EAP students showed improved confidence and reduced anxiety.</p>
 <br>
 <h3>Final Reflection</h3>
-<p>XJTAIK puts students first, using AI to support—not replace—human learning, focusing on safety, respect, and confidence.</p>
+<p>XJTAIK puts students first, using AI to support—not replace—human learning.</p>
 </div>
-<img src="屏幕截图2026-04-23 131235.png.jpg" alt="描述文字" style="width:100%; border-radius:4px;">
+<img src="屏幕截图2026-04-23 131235.png.jpg" style="width:100%; border-radius:4px;">
 </div>
 </section>
+
 <footer>
 <p>&copy; 2026 cherrrrrrrrrrry Project - CPT208 Groupwork</p>
 </footer>
+
 </body>
 </html>

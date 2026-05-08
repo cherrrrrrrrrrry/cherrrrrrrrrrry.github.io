@@ -192,7 +192,7 @@ display: block;
 <h2 class="section-title">02. User Requirements</h2>
 <div class="text-box">
 <h3>User journey map</h3>
-<img src="user_journey.jpg" style="margin-bottom: 20px;">
+<img src="user_journey.jpg" style="width:70%; margin-bottom:20px; border-radius:6px;">
 
 <h3>3 Must-Have "Playful" Requirements</h3>
 <ul style="padding-left:20px;">
@@ -205,15 +205,20 @@ display: block;
 
 <br>
 <h3>Evidence of life</h3>
-<!-- 四张图片位置 -->
-<img src="life1.jpg" style="margin-bottom: 15px;">
-<img src="life2.jpg" style="margin-bottom: 15px;">
-<img src="life3.jpg" style="margin-bottom: 15px;">
-<img src="life4.jpg" style="margin-bottom: 15px;">
-<!-- 视频位置 -->
-<video controls style="width:100%; border-radius:6px; margin-top:10px;">
+<!-- 一行3张排版，缩小尺寸 -->
+<div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-bottom:15px;">
+  <img src="life1.jpg" style="width:100%; border-radius:6px;">
+  <img src="life2.jpg" style="width:100%; border-radius:6px;">
+  <img src="life3.jpg" style="width:100%; border-radius:6px;">
+</div>
+<div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-bottom:15px;">
+  <img src="life4.jpg" style="width:100%; border-radius:6px;">
+</div>
+<!-- 视频缩小 -->
+<video controls style="width:70%; border-radius:6px;">
   <source src="life_video.mp4" type="video/mp4">
 </video>
+
 <audio controls style="width:100%; margin-top:10px;">
   <source src="./zhang.mp3" type="audio/mpeg">
 </audio>

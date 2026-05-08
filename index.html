@@ -101,7 +101,7 @@ background: var(--primary);
 display: grid;
 grid-template-columns: 1fr 1fr;
 gap: 50px;
-align-items: center;
+align-items: start;
 }
 .text-box h3 {
 color: var(--primary);
@@ -196,7 +196,8 @@ display: block;
     <img src="user_journey.jpg" style="width: 85%; margin-bottom: 20px; border-radius: 6px;">
   </div>
 
-  <div class="text-box">
+  <!-- 已往上提，标题和左侧平齐 -->
+  <div class="text-box" style="margin-top: 0;">
     <h3>3 Must-Have "Playful" Requirements</h3>
     <ul style="padding-left:20px;">
       <li>Low-pressure, judgment-free practice environment</li>
@@ -262,7 +263,7 @@ display: block;
   <!-- 新增：Low-Fi Prototype -->
   <div style="margin-top:50px; text-align:left;">
     <h3 style="font-size: 24px; color: #ffab8b; margin-bottom:15px;">Low-Fi Prototype</h3>
-    <p style="font-size:17px;">http: //111.229.242.175:1050/setup</p>
+    <p style="font-size:17px;">http://111.229.242.175:1050/setup</p>
   </div>
 </section>
 
@@ -299,9 +300,10 @@ display: block;
 </div>
 </section>
 
-<!-- 05. Evaluation & Reflection 已替换为你给的全文 -->
+<!-- 05. Evaluation & Reflection 改成和01一样左右两栏 -->
 <section id="evaluation">
 <h2 class="section-title">05. Evaluation & Reflection</h2>
+<div class="content-grid">
 <div class="text-box">
 <h3>5.1 Usability Testing</h3>
 <p>We conducted usability testing of the Alpha version with three target users, all of whom are XJTLU EAP students representing different levels of English proficiency and classroom participation. The testing yielded several key findings.First, 100% of users reported that the AI hint feature effectively alleviated the anxiety of “having nothing to say” and helped them quickly expand their ideas during discussions. Second, two users noted that the real-time feedback feature reduced their nervousness while speaking, as they no longer feared being judged for making mistakes. The system’s design, which uses non-intrusive visual cues instead of automatic microphone muting, preserves AI support while maintaining user control over their expression, aligning with our core design principle of “psychological safety first.”The testing also revealed areas for improvement: one user commented that the evaluation report contained too many technical terms, making it difficult to understand.</p>
@@ -310,18 +312,18 @@ display: block;
 <h3>5.2 Iterative Refinement</h3>
 <p>Based on the feedback from the Alpha usability test, we implemented two key iterations to refine the system.To address concerns about the intrusiveness of AI prompts, we introduced an “AI Hint Intensity Customization” feature, allowing users to select from three levels of prompt frequency: Low, Medium, or High. Users can also choose to disable the hints entirely, ensuring they remain in full control of the AI’s role in their discussion experience. This adjustment directly responds to the need for user agency, ensuring the tool supports rather than disrupts the natural flow of conversation.Additionally, we began revising the language used in the evaluation reports, replacing overly technical jargon with simpler, more accessible descriptions to improve clarity for all users.</p>
 
-<!-- 两张图片插入位置 -->
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0;">
-  <img src="eval_iter1.jpg" style="border-radius:6px;">
-  <img src="eval_iter2.jpg" style="border-radius:6px;">
-</div>
-
 <br>
 <h3>5.3 Final Reflection</h3>
 <p>This project was guided by a human-centered approach to AI collaboration, and we reflected deeply on the social and ethical implications of our design, as well as our use of AI throughout the development process.</p>
 <br>
 <h3>Social and Ethical Implications</h3>
 <p>Our design addresses a critical barrier to EAP learning by breaking the “silence barrier” and promoting educational equity. The system provides a low-pressure environment for students with social anxiety or low confidence in English expression. Pilot testing showed that 87.3% of users were willing or very willing to use XJTalk for regular EAP practice, which helps reduce participation gaps caused by the fear of speaking and enables more students to improve their English communication skills in a safe setting. The design prioritizes psychological safety by keeping users in full control of their voice, ensuring the technology empowers rather than replaces them.</p>
+</div>
+<!-- 右侧图片上下排列，和01样式大小完全一致 -->
+<div>
+  <img src="eval_iter1.jpg" style="margin-bottom: 20px;">
+  <img src="eval_iter2.jpg">
+</div>
 </div>
 </section>
 

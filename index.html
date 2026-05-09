@@ -196,7 +196,6 @@ display: block;
     <img src="user_journey.jpg" style="width: 85%; margin-bottom: 20px; border-radius: 6px;">
   </div>
 
-  <!-- 已往上提，标题和左侧平齐 -->
   <div class="text-box" style="margin-top: 0;">
     <h3>3 Must-Have "Playful" Requirements</h3>
     <ul style="padding-left:20px;">
@@ -218,8 +217,11 @@ display: block;
     <img src="life3.jpg" style="width:100%; height:190px; object-fit:cover; border-radius:6px;">
   </div>
 
+  <!-- 这里：life4 已改为视频，和原来尺寸完全一样 -->
   <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; width: 60%;">
-    <img src="life4.jpg" style="width:100%; height:190px; object-fit:cover; border-radius:6px;">
+    <video controls style="width:100%; height:190px; object-fit:cover; border-radius:6px;">
+      <source src="life4.mp4" type="video/mp4">
+    </video>
     <video controls style="width:100%; height:190px; object-fit:cover; border-radius:6px;">
       <source src="life_video.mp4" type="video/mp4">
     </video>
@@ -227,7 +229,7 @@ display: block;
 
   <audio controls style="width:90%; margin-top:15px;">
     <source src="./zhang.mp3" type="audio/mpeg">
-  
+  </audio>
 </div>
 </section>
 
@@ -260,7 +262,6 @@ display: block;
     We selected Alternative 1 (AI-driven real-time hint system) as the core function, combined with elements of Alternative 4 (visual progress tracker). This combination addresses the core pain point of student anxiety by providing gentle, user-controlled hints, while the progress tracker solves low-efficiency group work. It ensures psychological safety and meets all playful requirements.
   </div>
 
-  <!-- 新增：Low-Fi Prototype -->
   <div style="margin-top:50px; text-align:left;">
     <h3 style="font-size: 24px; color: #ffab8b; margin-bottom:15px;">Low-Fi Prototype</h3>
     <p style="font-size:17px;">http://111.229.242.175:1050/setup</p>
@@ -273,10 +274,9 @@ display: block;
 <div class="content-grid">
 <div class="text-box">
 <h3>System Architecture</h3>
-<p>Frontend interface + Communication + Backend management.</p>
+<p>Frontend interface + Backend management + AI hints & summaries.</p>
 <br>
 
-<!-- 新增：High-Fi Prototype -->
 <h3>High-Fi Prototype</h3>
 <p>https://github.com/MalachiteN/CPT208-Demo</p>
 <br>
@@ -284,13 +284,12 @@ display: block;
 <h3>Individual Contributions</h3>
 <table border="1" cellpadding="10" style="border-collapse:collapse; width:100%;">
 <tr><th>Member</th><th>Role</th></tr>
-<tr><td>Ouyang Kaihan</td><td>Backend & User Management</td></tr>
-<tr><td>Hanqi Yan</td><td>UI/UX Design & Prototypes</td></tr>
-<tr><td>Enqi Fan</td><td>AI Integration & Testing</td></tr>
-<tr><td>Caiyi Yang</td><td>Research & Evaluation</td></tr>
+<tr><td>A</td><td>Backend & User Management</td></tr>
+<tr><td>B</td><td>UI/UX Design & Prototypes</td></tr>
+<tr><td>C</td><td>AI Integration & Testing</td></tr>
+<tr><td>D</td><td>Research & Evaluation</td></tr>
 </table>
 <br>
-<!-- 新增：vibe coding 图片位 -->
 <h3>vibe coding</h3>
 <img src="vibe.jpg" style="width:100%; border-radius:6px; margin-top:10px;">
 </div>
@@ -300,7 +299,7 @@ display: block;
 </div>
 </section>
 
-<!-- 05. Evaluation & Reflection 改成和01一样左右两栏 -->
+<!-- 05. Evaluation & Reflection 四张图片竖排 -->
 <section id="evaluation">
 <h2 class="section-title">05. Evaluation & Reflection</h2>
 <div class="content-grid">
@@ -310,9 +309,7 @@ display: block;
 
 <br>
 <h3>5.2 Iterative Refinement</h3>
-<p>Based on the feedback from the Alpha usability test, we implemented one key iteration to refine the system.
-
-First, to address user concerns about uncertainty regarding the AI’s thinking status and response generation progress, we introduced two new visual feedback mechanisms: an AI Hint Generation Indicator and an AI Summary Thinking Display. Previously, users could not tell whether the system was actively generating ideas or experiencing delays, leading to anxiety about "AI freezing" or repeated, unnecessary clicks that could trigger duplicate requests to the LLM. The new visual cues now clearly show when the AI is processing, eliminating user uncertainty and preventing redundant operations. This adjustment directly responds to the need for transparency and trust, significantly improving the efficiency of the idea-generation workflow and reducing unnecessary user actions.</p>
+<p>Based on the feedback from the Alpha usability test, we implemented two key iterations to refine the system.To address concerns about the intrusiveness of AI prompts, we introduced an “AI Hint Intensity Customization” feature, allowing users to select from three levels of prompt frequency: Low, Medium, or High. Users can also choose to disable the hints entirely, ensuring they remain in full control of the AI’s role in their discussion experience. This adjustment directly responds to the need for user agency, ensuring the tool supports rather than disrupts the natural flow of conversation.Additionally, we began revising the language used in the evaluation reports, replacing overly technical jargon with simpler, more accessible descriptions to improve clarity for all users.</p>
 
 <br>
 <h3>5.3 Final Reflection</h3>
@@ -321,10 +318,12 @@ First, to address user concerns about uncertainty regarding the AI’s thinking 
 <h3>Social and Ethical Implications</h3>
 <p>Our design addresses a critical barrier to EAP learning by breaking the “silence barrier” and promoting educational equity. The system provides a low-pressure environment for students with social anxiety or low confidence in English expression. Pilot testing showed that 87.3% of users were willing or very willing to use XJTalk for regular EAP practice, which helps reduce participation gaps caused by the fear of speaking and enables more students to improve their English communication skills in a safe setting. The design prioritizes psychological safety by keeping users in full control of their voice, ensuring the technology empowers rather than replaces them.</p>
 </div>
-<!-- 右侧图片上下排列，和01样式大小完全一致 -->
+<!-- 右侧：四张图片 竖直排列 -->
 <div>
-  <img src="eval_iter1.jpg" style="margin-bottom: 20px;">
-  <img src="eval_iter2.jpg">
+  <img src="eval1.jpg" style="margin-bottom: 20px;">
+  <img src="eval2.jpg" style="margin-bottom: 20px;">
+  <img src="eval3.jpg" style="margin-bottom: 20px;">
+  <img src="eval4.jpg">
 </div>
 </div>
 </section>

@@ -124,6 +124,16 @@ border-radius: 6px;
 object-fit: cover;
 display: block;
 }
+/* 链接默认样式和文字一致，hover变色 */
+a.link-text {
+color: var(--dark);
+text-decoration: none;
+font-size:17px;
+}
+a.link-text:hover {
+color: var(--primary);
+text-decoration: underline;
+}
 </style>
 </head>
 <body>
@@ -217,7 +227,7 @@ display: block;
     <img src="life3.jpg" style="width:100%; height:190px; object-fit:cover; border-radius:6px;">
   </div>
 
-  <!-- 这里：life4 已改为视频，和原来尺寸完全一样 -->
+  <!-- life4 改为视频 -->
   <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; width: 60%;">
     <video controls style="width:100%; height:190px; object-fit:cover; border-radius:6px;">
       <source src="life4.mp4" type="video/mp4">
@@ -229,7 +239,7 @@ display: block;
 
   <audio controls style="width:90%; margin-top:15px;">
     <source src="./zhang.mp3" type="audio/mpeg">
-  </audio>
+  
 </div>
 </section>
 
@@ -262,9 +272,10 @@ display: block;
     We selected Alternative 1 (AI-driven real-time hint system) as the core function, combined with elements of Alternative 4 (visual progress tracker). This combination addresses the core pain point of student anxiety by providing gentle, user-controlled hints, while the progress tracker solves low-efficiency group work. It ensures psychological safety and meets all playful requirements.
   </div>
 
+  <!-- Low-Fi Prototype 超链接 -->
   <div style="margin-top:50px; text-align:left;">
     <h3 style="font-size: 24px; color: #ffab8b; margin-bottom:15px;">Low-Fi Prototype</h3>
-    <p style="font-size:17px;">http://111.229.242.175:1050/setup</p>
+    <a href="http://111.229.242.175:1050/setup" target="_blank" class="link-text">http://111.229.242.175:1050/setup</a>
   </div>
 </section>
 
@@ -277,8 +288,9 @@ display: block;
 <p>Frontend interface + Backend management + AI hints & summaries.</p>
 <br>
 
+<!-- High-Fi Prototype 超链接 -->
 <h3>High-Fi Prototype</h3>
-<p>https://github.com/MalachiteN/CPT208-Demo</p>
+<a href="https://github.com/MalachiteN/CPT208-Demo" target="_blank" class="link-text">https://github.com/MalachiteN/CPT208-Demo</a>
 <br>
 
 <h3>Individual Contributions</h3>
@@ -318,7 +330,7 @@ display: block;
 <h3>Social and Ethical Implications</h3>
 <p>Our design addresses a critical barrier to EAP learning by breaking the “silence barrier” and promoting educational equity. The system provides a low-pressure environment for students with social anxiety or low confidence in English expression. Pilot testing showed that 87.3% of users were willing or very willing to use XJTalk for regular EAP practice, which helps reduce participation gaps caused by the fear of speaking and enables more students to improve their English communication skills in a safe setting. The design prioritizes psychological safety by keeping users in full control of their voice, ensuring the technology empowers rather than replaces them.</p>
 </div>
-<!-- 右侧：四张图片 竖直排列 -->
+<!-- 右侧四张竖排图片 -->
 <div>
   <img src="eval1.jpg" style="margin-bottom: 20px;">
   <img src="eval2.jpg" style="margin-bottom: 20px;">
